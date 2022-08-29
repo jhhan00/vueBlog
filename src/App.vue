@@ -35,14 +35,32 @@
       </div>
     </div>
   </nav>
+
+  <div class="container">
+    <h5>Vue Router 학습을 진행해봅시다</h5>
+    <p>[Vue Router 학습]</p>
+  </div>
+
+  <List :blogPosts="blogPosts"></List>
+
 </template>
 
 <script>
 
+import List from './components/List.vue';
+
+import posts from './assets/posts.js';
+
 export default {
   name: 'App',
   components: {
-  }
+    List
+  },
+  data() {
+    return {
+      blogPosts : posts,
+    }
+  },
 }
 </script>
 
