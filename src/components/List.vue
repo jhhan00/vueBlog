@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h5>{{ blogPosts[0].title }}</h5>
+    <router-link to="/detail">
+      <h5>{{ blogPosts[0].title }}</h5>
+    </router-link>
     <p>{{ blogPosts[0].date }}</p>
   </div>
   <div>
