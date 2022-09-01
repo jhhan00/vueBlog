@@ -1,12 +1,18 @@
 <template>
-  <h4>상세페이지</h4>
-  <h5>글 제목</h5>
-  <p>글 설명</p>
+  <div>
+    <!-- {{$route.params.id}} -->
+    <h4>상세 페이지</h4>
+    <h5>{{ blogPosts[$route.params.id].title }}</h5>
+    <p>{{ blogPosts[$route.params.id].content }}</p>
+  </div>
 </template>
 
 <script>
 export default {
     name : 'DetailComponent',
+    props : {
+        blogPosts : Array,
+    },
 }
 </script>
 

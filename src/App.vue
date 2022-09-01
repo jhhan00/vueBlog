@@ -27,7 +27,9 @@
   <router-link to="/">Home</router-link> &nbsp;
   <router-link to="/list">List</router-link>
 
-  <router-view :blogPosts="blogPosts"></router-view>
+  <div class="mt-3">
+    <router-view :blogPosts="blogPosts"></router-view>
+  </div>
 
   <!-- <List :blogPosts="blogPosts"></List> -->
 

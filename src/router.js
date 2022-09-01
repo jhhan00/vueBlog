@@ -7,14 +7,17 @@ const routes = [
   {
     path: "/",
     component: Home,
+    name : "home",
   },
   {
     path: "/list",
     component: List,
+    name : "list",
   },
   {
-    path: "/detail",
+    path: "/detail/:id(\\d+)",
     component: Detail,
+    name : "detail",
   },
 ];
 
