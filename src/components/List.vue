@@ -14,9 +14,10 @@
     <p>{{ blogPosts[2].date }}</p>
   </div> -->
   <div v-for="(blogPost, idx) in blogPosts" :key="idx">
-    <router-link :to="{ name: 'detail', params: {id: idx} }">
+    <!-- <router-link :to="{ name: 'detail', params: {id: idx} }">
       <h5>{{blogPost.title}}</h5>
-    </router-link>
+    </router-link> -->
+    <h5 @click="$router.push('/detail/' + idx)">{{blogPost.title}}</h5>
     <p>{{blogPost.date}}</p>
   </div>
 </template>
